@@ -12,4 +12,7 @@
     {{ form_row(form.brand) }}
     {{ form_row(form.save, {'label': 'Update'}) }}
     {{ form_end(form) }}
+           <form action="{{ path('product_delete', {'id': product.id}) }}" method="post">
+            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded">Delete Product</button>
+        </form>
 {% endblock %}

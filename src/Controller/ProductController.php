@@ -88,7 +88,16 @@ class ProductController extends AbstractController
 
         return $this->render('product/product-form-update.html.twig', [
             'form' => $form->createView(),
+            'product' => $product,
         ]);
     }
 
+    public function delete(Request $request, EntityManagerInterface $entityManager, Product $product): Response
+    {
+        $entityManager->remove($product);
+        $entityManager->flush();
+
+        
+        return $this->redirectToRoute('/');
+    }
 }
