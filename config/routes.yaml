@@ -8,3 +8,17 @@ lucky_number:
     path: '/lucky/number'
     controller: 'App\Controller\LuckyController::number'
     methods: [GET]
+
+
+product_show:
+    path: '/product/{id}'
+    controller: 'App\Controller\ProductController::show'
+    methods: ['GET']
+    requirements:
+        id: '\d+'  
+
+product_new:
+    path: '/product/new'
+    controller: 'App\Controller\ProductController::new'
+    methods: ['GET', 'POST']
+

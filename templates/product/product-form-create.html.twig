@@ -1,0 +1,15 @@
+{# templates/product/product-form-create.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Create New Product{% endblock %}
+
+{% block body %}
+    <h1>Create New Product</h1>
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.price) }}
+    {{ form_row(form.brand) }}
+    {{ form_row(form.save) }}
+    {{ form_end(form) }}
+{% endblock %}
