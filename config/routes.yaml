@@ -22,3 +22,7 @@ product_new:
     controller: 'App\Controller\ProductController::new'
     methods: ['GET', 'POST']
 
+product_edit:
+    path: '/product/{id}/edit'
+    controller: 'App\Controller\ProductController::edit'
+    methods: ['GET', 'POST']

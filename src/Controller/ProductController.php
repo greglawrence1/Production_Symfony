@@ -75,4 +75,20 @@ class ProductController extends AbstractController
         ]);
     }
 
+    public function edit(Request $request, EntityManagerInterface $entityManager, Product $product): Response
+    {
+        $form = $this->createForm(ProductCreateType::class, $product);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->flush();
+
+            return $this->redirectToRoute('product_show', ['id' => $product->getId()]);
+        }
+
+        return $this->render('product/product-form-update.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
 }
