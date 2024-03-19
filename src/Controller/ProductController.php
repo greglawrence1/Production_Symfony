@@ -98,6 +98,6 @@ class ProductController extends AbstractController
         $entityManager->flush();
 
         
-        return $this->redirectToRoute('/');
+        return $this->redirectToRoute('/home');
     }
 }
