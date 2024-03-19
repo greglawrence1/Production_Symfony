@@ -3,16 +3,17 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Edit Product{% endblock %}
-{% include './navbar.html.twig' %}
+
 {% block body %}
+{% include './navbar.html.twig' %}
     <h1>Edit Product</h1>
     {{ form_start(form) }}
-    {{ form_row(form.name) }}
-    {{ form_row(form.price) }}
-    {{ form_row(form.brand) }}
+    {{ form_row(form.name, {'label': 'Product Name: ' ~ product.name }) }}
+    {{ form_row(form.price, {'label': 'Product Price: ' ~ product.price}) }}
+    {{ form_row(form.brand, {'label': 'Product Brand: ' ~ product.brand}) }}
     {{ form_row(form.save, {'label': 'Update'}) }}
     {{ form_end(form) }}
            <form action="{{ path('product_delete', {'id': product.id}) }}" method="post">
-            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded">Delete Product</button>
+            <button type="submit" class="bg-red-500 text-black px-4 py-2 rounded">Delete Product</button>
         </form>
 {% endblock %}
