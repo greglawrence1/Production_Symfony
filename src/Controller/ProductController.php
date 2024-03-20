@@ -29,15 +29,6 @@ class ProductController extends AbstractController
 
         return new Response('Saved new product with id '.$product->getId());
     }
-    #[Route('/create-multiple-products')]
-    public function createMultipleProducts(EntityManagerInterface $entityManager): Response
-{
-    $this->createProduct($entityManager, 'Chalk Ball', 1999, 'Decathlon');
-    $this->createProduct($entityManager, 'Running Shoes', 2999, 'Nike');
-    $this->createProduct($entityManager, 'Yoga Mat', 2499, 'Adidas');
-
-    return new Response('Multiple products created successfully.');
-}
   
     public function show(EntityManagerInterface $entityManager, int $id): Response
     {
