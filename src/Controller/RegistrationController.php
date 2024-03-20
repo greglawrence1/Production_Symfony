@@ -12,6 +12,13 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class RegistrationController extends AbstractController
 {
+    private $authenticationUtils;
+
+    public function __construct(AuthenticationUtils $authenticationUtils)
+    {
+        $this->authenticationUtils = $authenticationUtils;
+    }
+
     #[Route('/registration', name: 'app_registration')]
     public function index(): Response
     {
@@ -19,24 +26,21 @@ class RegistrationController extends AbstractController
             'controller_name' => 'RegistrationController',
         ]);
     }
-    public function login(AuthenticationUtils $authenticationUtils): Response
-    {
-        // Get the login error if there is one
-        $error = $authenticationUtils->getLastAuthenticationError();
+    public function login()
+{
+    // get the login error if there is one
+    $error = $this->authenticationUtils->getLastAuthenticationError();
 
-        // Last username entered by the user
-        $lastUsername = $authenticationUtils->getLastUsername();
+    // last username entered by the user
+    $lastUsername = $this->authenticationUtils->getLastUsername();
 
-        // Create a login form
-        $form = $this->createForm(LoginFormType::class);
-
-        return $this->render('registration/login.html.twig', [
-            'last_username' => $lastUsername,
-            'error' => $error,
-            'form' => $form->createView(),
-        ]);
-    }
-
+    return $this->render('registration/login.html.twig', [
+        'last_username' => $lastUsername,
+        'error'         => $error,
+    ]);
+}
+    
+    #[Route('/logout', name: 'app_logout')]
     public function logout(): void
     {
         
