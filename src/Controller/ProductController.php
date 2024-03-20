@@ -100,4 +100,14 @@ class ProductController extends AbstractController
         
         return $this->redirectToRoute('/home');
     }
+
+    public function listProducts(EntityManagerInterface $entityManager): Response
+    {
+        $products = $entityManager->getRepository(Product::class)->findAll();
+
+        return $this->render('product/all-products.html.twig', [
+            'products' => $products,
+        ]);
+    }
+
 }

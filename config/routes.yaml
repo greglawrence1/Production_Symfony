@@ -35,3 +35,8 @@ product_delete:
     path: '/product/{id}/delete'
     controller: 'App\Controller\ProductController::delete'
     methods: ['POST']
+
+products:
+    path: /products
+    controller: App\Controller\ProductController::listProducts
+    methods: ['GET']

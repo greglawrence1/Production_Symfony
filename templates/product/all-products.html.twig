@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+{% include './navbar.html.twig' %}
+
+<h1>Products</h1>
+
+{% for product in products %}
+    <div class="product-card">              
+        <div class="name">{{ product.name }}</div>
+        <div class="brand">{{ product.brand }}</div>
+        <div class="price">{{ product.price }}</div>
+    </div>
+{% endfor %}
+
+</body>
+</html>
