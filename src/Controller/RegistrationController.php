@@ -15,4 +15,6 @@ class RegistrationController extends AbstractController
             'controller_name' => 'RegistrationController',
         ]);
     }
+
 }
+
