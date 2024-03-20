@@ -48,14 +48,9 @@ class ProductController extends AbstractController
                 'No product found for id '.$id
             );
         }
-
-        //return new Response('Check out this great product: '.$product->getName());
-
+     
             return $this->render('product/product-card.html.twig', [
             'product' => $product,]);
-        // or render a template
-        // in the template, print things with {{ product.name }}
-        // return $this->render('product/show.html.twig', ['product' => $product]);
     }  
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {

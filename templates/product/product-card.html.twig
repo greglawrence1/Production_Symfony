@@ -7,9 +7,9 @@
     <title>{{ product.name }}</title>
 </head>
 <body>
+<link href="{{ asset('build/tailwind.css') }}" rel="stylesheet">
 {% include './navbar.html.twig' %}
-    <h1>{{ product.name }}</h1>
-    <div class="product-card">              
+    <div style="background-color: blue; color: red; border: 5px solid black; border-radius: 0.375rem;" class="text-black">              
         <div class="name">{{ product.name }}</div>
         <div class="brand">{{ product.brand }}</div>
         <div class="price">{{ product.price }}</div>
