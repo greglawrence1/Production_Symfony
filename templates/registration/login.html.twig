@@ -7,10 +7,10 @@
 
 <form action="{{ path('app_login') }}" method="post">
      <label for="email">Email:</label>
-    <input type="text" id="email" name="_email" value="{{ last_username }}" />
+    <input type="text" id="email" name="email" value="{{ last_username }}" />
 
     <label for="password">Password:</label>
-    <input type="password" id="password" name="_password" />
+    <input type="password" id="password" name="password" />
 
     {#
         If you want to control the URL the user

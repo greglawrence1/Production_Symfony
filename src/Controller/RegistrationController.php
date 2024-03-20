@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class RegistrationController extends AbstractController
-{
+{   
     private $authenticationUtils;
 
     public function __construct(AuthenticationUtils $authenticationUtils)
@@ -26,8 +26,10 @@ class RegistrationController extends AbstractController
             'controller_name' => 'RegistrationController',
         ]);
     }
-    public function login()
+    public function login(Request $request): Response
 {
+    $form = $this->createForm(LoginFormType::class);
+    $form->handleRequest($request);
     // get the login error if there is one
     $error = $this->authenticationUtils->getLastAuthenticationError();
 
