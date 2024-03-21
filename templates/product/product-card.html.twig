@@ -13,6 +13,12 @@
         <div class="name">{{ product.name }}</div>
         <div class="brand">{{ product.brand }}</div>
         <div class="price">{{ product.price }}</div>
+        <button id="buyButton" style="background-color: green; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;">Buy</button>
     </div>
+    <script>
+    document.getElementById('buyButton').addEventListener('click', function() {
+        alert('Congratulations! Product purchased.');
+    });
+</script>
 </body>
 </html>
