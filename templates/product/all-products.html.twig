@@ -15,6 +15,7 @@
         <div class="name">{{ product.name }}</div>
         <div class="brand">{{ product.brand }}</div>
         <div class="price">{{ product.price }}</div>
+         <a href="{{ path('product_edit', {'id': product.id}) }}" style="background-color: green; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;">Edit</a> 
     </div>
 {% endfor %}
 

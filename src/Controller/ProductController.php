@@ -84,7 +84,7 @@ class ProductController extends AbstractController
         $entityManager->flush();
 
         
-        return $this->redirectToRoute('/home');
+        return $this->redirectToRoute('home');
     }
 
     public function listProducts(EntityManagerInterface $entityManager): Response
