@@ -1,13 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
 {# templates/product/product-form-create.html.twig #}
 
-{% extends 'base.html.twig' %}
-
-{% block title %}Create New Product{% endblock %}
-
-{% block body %}
+<body style="background-image: url('{{ asset('images/background.jpg') }}'); background-size: cover;">
 {% include './navbar.html.twig' %}
 
-
+<div class="form-container" style="max-width: 400px; margin: 0 auto; padding: 20px; background-color: white; border-radius: 10px; box-shadow: black;">
     <h1 style="color: red;">Create New Product</h1>
     {{ form_start(form) }}
     {{ form_row(form.name) }}
@@ -15,4 +13,6 @@
     {{ form_row(form.brand) }}
     <div style="background-color: green; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;"> {{ form_row(form.save) }} </div>
     {{ form_end(form) }}
-{% endblock %}
+</div>
+</body>
+</html
