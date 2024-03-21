@@ -53,3 +53,7 @@ app_login:
 app_logout:
     path: /logout
     controller: App\Controller\RegistrationController::logout
+
+bouldering:
+    path: /bouldering
+    controller: App\Controller\ProductController::bouldering

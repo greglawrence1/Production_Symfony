@@ -96,4 +96,9 @@ class ProductController extends AbstractController
         ]);
     }
 
+    public function bouldering(): Response
+    {
+        return $this->render('home/bouldering.html.twig');
+    }
+
 }
