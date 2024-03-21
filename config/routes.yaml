@@ -48,7 +48,7 @@ app_registration:
 app_login:
     path: /login
     controller: App\Controller\RegistrationController::login
-    methods: ['POST']
+    methods: ['GET', 'POST']
 
 app_logout:
     path: /logout
