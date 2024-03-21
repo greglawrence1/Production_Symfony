@@ -101,4 +101,8 @@ class ProductController extends AbstractController
         return $this->render('home/bouldering.html.twig');
     }
 
+    public function about(): Response
+    {
+        return $this->render('home/about.html.twig');
+    }
 }

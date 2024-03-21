@@ -57,3 +57,7 @@ app_logout:
 bouldering:
     path: /bouldering
     controller: App\Controller\ProductController::bouldering
+    
+about:
+    path: /about
+    controller: App\Controller\ProductController::about
