@@ -11,9 +11,9 @@
     {{ form_row(form.name, {'label': 'Product Name: ' ~ product.name }) }}
     {{ form_row(form.price, {'label': 'Product Price: ' ~ product.price}) }}
     {{ form_row(form.brand, {'label': 'Product Brand: ' ~ product.brand}) }}
-    {{ form_row(form.save, {'label': 'Update'}) }}
+    <div style="background-color: green; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;">{{ form_row(form.save, {'label': 'Update'}) }} </div>
     {{ form_end(form) }}
-           <form action="{{ path('product_delete', {'id': product.id}) }}" method="post">
-            <button type="submit" class="bg-red-500 text-black px-4 py-2 rounded">Delete Product</button>
+        <form action="{{ path('product_delete', {'id': product.id}) }}" method="post">
+            <button type="submit" style="background-color: green; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;">Delete Product</button>
         </form>
 {% endblock %}
