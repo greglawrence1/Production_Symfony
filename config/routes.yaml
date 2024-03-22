@@ -61,3 +61,12 @@ bouldering:
 about:
     path: /about
     controller: App\Controller\ProductController::about
+
+app_login1:
+    path: /login1
+    controller: App\Controller\LoginController::login
+    methods: ['GET', 'POST']
+
+app_logout1:
+    path: /logout1
+    controller: App\Controller\LoginController::logout
