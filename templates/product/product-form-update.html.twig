@@ -1,19 +1,21 @@
-{# templates/product/edit.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+{# templates/product/product-form-update.html.twig #}
 
-{% extends 'base.html.twig' %}
-
-{% block title %}Edit Product{% endblock %}
-
-{% block body %}
+<body style="background-image: url('{{ asset('images/background.jpg') }}'); background-size: cover;">
 {% include './navbar.html.twig' %}
+
+<div class="form-container" style="max-width: 400px; margin: 0 auto; padding: 20px; background-color: white; border-radius: 10px; box-shadow: black;">
     <h1>Edit Product</h1>
     {{ form_start(form) }}
     {{ form_row(form.name, {'label': 'Product Name: ' ~ product.name }) }}
-    {{ form_row(form.price, {'label': 'Product Price: ' ~ product.price}) }}
-    {{ form_row(form.brand, {'label': 'Product Brand: ' ~ product.brand}) }}
+    {{ form_row(form.price, {'label': 'Product Price: ' ~ product.price }) }}
+    {{ form_row(form.brand, {'label': 'Product Brand: ' ~ product.brand }) }}
     <div style="background-color: green; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;">{{ form_row(form.save, {'label': 'Update'}) }} </div>
     {{ form_end(form) }}
         <form action="{{ path('product_delete', {'id': product.id}) }}" method="post">
             <button type="submit" style="background-color: green; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;">Delete Product</button>
         </form>
-{% endblock %}
+    </div>
+</body>
+</html>
