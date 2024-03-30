@@ -15,11 +15,12 @@
                     <a href="{{ path('about') }}" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
                     <a href="{{ path('bouldering') }}" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Bouldering</a>
                     <a href="{{ path('products') }}" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Products</a>
-                    <a href="{{ path('app_login') }}" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Login</a>
-
-                    {% if app.user %}
-                    <a href="{{ path('app_logout') }}">Logout</a>
-                    {% endif %}
+                   <a
+                                        class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                                        href="/{{app.user ? 'logout' : 'login'}}"
+                                        @click="isOpen = false">
+                                        {{ app.user ? 'Logout' : 'Login' }}
+                                    </a>
                 </div>
             </div>
             <!-- Mobile menu button (hidden on larger screens) -->

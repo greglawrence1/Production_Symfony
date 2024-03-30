@@ -41,19 +41,6 @@ products:
     controller: App\Controller\ProductController::listProducts
     methods: ['GET']
 
-app_registration:
-    path: /registration
-    controller: App\Controller\RegistrationController::index
-
-app_login:
-    path: /login
-    controller: App\Controller\RegistrationController::login
-    methods: ['GET', 'POST']
-
-app_logout:
-    path: /logout
-    controller: App\Controller\RegistrationController::logout
-
 bouldering:
     path: /bouldering
     controller: App\Controller\ProductController::bouldering
@@ -61,3 +48,7 @@ bouldering:
 about:
     path: /about
     controller: App\Controller\ProductController::about
+
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
