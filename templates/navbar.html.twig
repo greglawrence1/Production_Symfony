@@ -9,8 +9,9 @@
             <!-- Navigation links -->
             <div class="hidden md:block">
                 <div class="flex items-center space-x-4">
-                   
+                    {% if app.user %}
                     <a href="{{ path('product_new') }}" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Add Products</a>                   
+                    {% endif %}
                     <a href="{{ path('home') }}" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
                     <a href="{{ path('about') }}" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
                     <a href="{{ path('bouldering') }}" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Bouldering</a>
@@ -21,7 +22,9 @@
                                         @click="isOpen = false">
                                         {{ app.user ? 'Logout ' ~ app.user.email : 'Login' }}
                     </a>
+                    {% if not app.user %}
                     <a href="{{ path('app_register') }}" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Register</a>
+                    {% endif %}
                 </div>
             </div>
             <!-- Mobile menu button (hidden on larger screens) -->
