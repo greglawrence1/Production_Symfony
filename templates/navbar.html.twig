@@ -19,8 +19,8 @@
                                         class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
                                         href="/{{app.user ? 'logout' : 'login'}}"
                                         @click="isOpen = false">
-                                        {{ app.user ? 'Logout' : 'Login' }}
-                                    </a>
+                                        {{ app.user ? 'Logout ' ~ app.user.email : 'Login' }}
+                    </a>
                 </div>
             </div>
             <!-- Mobile menu button (hidden on larger screens) -->
