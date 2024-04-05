@@ -50,7 +50,14 @@
   * {box-sizing: border-box;}
 
 .img-magnifier-container {
-  position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.img-magnifier-container img {
+    margin-right: 20px;
 }
 
 .img-magnifier-glass {
@@ -62,4 +69,7 @@
   height: 100px;
   left: 0;
   top: 0;
+}
+.image-description{
+    flex: 1;
 }
