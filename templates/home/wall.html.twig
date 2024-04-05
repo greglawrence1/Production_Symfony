@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="my.js"></script>
+ <link rel="stylesheet" href="styles2.css">
+<body style="background-image: url('{{ asset('images/background.jpg') }}'); background-size: cover;">
+{% include './navbar.html.twig' %}
+<div class="img-magnifier-container">
+  <img id="myimage" src="\images\jug.jpg.webp" width="400" height="200" alt="Girl">
+</div>
+<script>
+    magnify("myimage", 3);
+</script>
+</body>
+</html>

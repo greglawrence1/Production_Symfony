@@ -48,6 +48,10 @@ bouldering:
 team:
     path: /team
     controller: App\Controller\ProductController::team
+
+wall:
+    path: /wall
+    controller: App\Controller\ProductController::wall
     
 about:
     path: /about

@@ -109,4 +109,8 @@ class ProductController extends AbstractController
     {
         return $this->render('home/team.html.twig');
     }
+    public function wall(): Response
+    {
+        return $this->render('home/wall.html.twig');
+    }
 }
