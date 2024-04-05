@@ -66,3 +66,9 @@ function openModal() {
     dots[slideIndex1-1].className += " active";
     captionText.innerHTML = dots[slideIndex1-1].alt;
   }
+  
+  document.addEventListener('click', e => {
+    if (e.target.matches('.button')) {
+        alert("Email sent");
+    }
+});
