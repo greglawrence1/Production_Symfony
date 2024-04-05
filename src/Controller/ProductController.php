@@ -105,4 +105,8 @@ class ProductController extends AbstractController
     {
         return $this->render('home/about.html.twig');
     }
+    public function team(): Response
+    {
+        return $this->render('home/team.html.twig');
+    }
 }

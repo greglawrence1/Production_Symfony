@@ -44,6 +44,10 @@ products:
 bouldering:
     path: /bouldering
     controller: App\Controller\ProductController::bouldering
+
+team:
+    path: /team
+    controller: App\Controller\ProductController::team
     
 about:
     path: /about
