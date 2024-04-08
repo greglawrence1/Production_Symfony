@@ -19,8 +19,11 @@
                 <a href="{{ path('about') }}">About Us</a>
                 <a href="{{ path('bouldering') }}">Bouldering</a>
                 <a href="{{ path('products') }}">Products</a>
+                {% if  app.user and 'ROLE_ADMIN'in app.user.roles %}
+                <a href="{{ path('product_new') }}">Add Product</a>
+                {% endif %}
                 <a href="{{ path('team') }}">The Team</a>
-                 <a href="{{ path('wall') }}">The Wall</a>
+                <a href="{{ path('wall') }}">The Wall</a>
                 <a href="/{{ app.user ? 'logout' : 'login' }}" @click="isOpen = false">{{ app.user ? 'Logout ' ~ app.user.email : 'Login' }}</a>
                 {% if not app.user %}
                 <a href="{{ path('app_register') }}">Register</a>
