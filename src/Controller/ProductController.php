@@ -21,10 +21,8 @@ class ProductController extends AbstractController
         $product->setPrice($price);
         $product->setBrand($brand);
 
-        // tell Doctrine you want to (eventually) save the Product (no queries yet)
         $entityManager->persist($product);
 
-        // actually executes the queries (i.e. the INSERT query)
         $entityManager->flush();
 
         return new Response('Saved new product with id '.$product->getId());
