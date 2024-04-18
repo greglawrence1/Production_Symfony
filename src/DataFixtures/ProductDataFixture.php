@@ -11,7 +11,7 @@ class ProductDataFixture extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        // Create sample products
+        
         $productsData = [
             ['name' => 'Chalk Ball', 'price' => 1999, 'brand' => 'Decathlon'],
             ['name' => 'Running Shoes', 'price' => 2999, 'brand' => 'Nike'],
